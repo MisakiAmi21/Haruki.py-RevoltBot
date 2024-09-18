@@ -1,12 +1,8 @@
-from pymongo import MongoClient
 import aiohttp
 import asyncio
 import random
 import revolt
 from revolt.ext import commands
-
-client = MongoClient('mongodb+srv://Misaki:Him09@cluster0.wcov7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-db = client['db1']
 
 class Client(commands.CommandsClient):
     async def get_prefix(self, message:revolt.Message):
